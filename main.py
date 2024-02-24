@@ -7,14 +7,21 @@ def main():
    ##################################################
    # Code your program here
    ##################################################
-    # overtime = workhours - reg_hours
-    # overtime_wage = overtime * ov_rate
-    # regular_wage = reg_hours * reg_rate
-    # total_wage = regular_wage + overtime_wage
+    #Calculate regular hours and overtime
+    overtime = max(workhours - reg_hours, 0)
+    
+    #Calculate overtime wage
+    overtime_wage = overtime * ov_rate
+    
+    #Calculate regular wage 
+    regular_wage = min(workhours, reg_hours) * reg_rate
 
-    print(f"Regular hours: {reg_hours} Regular Charge: {regular_wage}")
-    print(f"Overtime hours: {overtime} Overtime Charge: {overtime_wage:.2f}")
-    print(f"Total wage : {total_wage:.2f}")
+    #Calculate total wage
+    total_wage = regular_wage + overtime_wage
+
+    print(f"Regular Charge: ${regular_wage:.2f}")
+    print(f"Overtime Charge: ${overtime_wage:.2f}")
+    print(f"Total wage : ${total_wage:.2f}")
 
    ##################################################
    # Do not delete the return statement
