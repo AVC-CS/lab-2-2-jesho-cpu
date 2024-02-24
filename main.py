@@ -19,8 +19,8 @@ def main():
     #Calculate total wage
     total_wage = regular_wage + overtime_wage
 
-    print(f"Regular hours: {reg_hours} Regular Charge: ${regular_wage:.2f}")
-    print(f"Overtime hours: {overtime} Overtime Charge: ${overtime_wage:.2f}")
+    print(f"Regular Charge: ${regular_wage:.2f}")
+    print(f"Overtime Charge: ${overtime_wage:.2f}")
     print(f"Total wage : ${total_wage:.2f}")
 
    ##################################################
